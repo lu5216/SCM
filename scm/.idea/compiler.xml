@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="transport.api" />
+        <module name="common" />
+        <module name="warehouse.impl" />
+        <module name="transport.impl" />
+        <module name="systemBase.api" />
+        <module name="systemBase.impl" />
+        <module name="warehouse.api" />
+        <module name="entrance" />
+        <module name="order.api" />
+        <module name="order.impl" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="entrance" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="order.api" options="-parameters" />
+      <module name="order.impl" options="-parameters" />
+      <module name="scm" options="-parameters" />
+      <module name="systemBase.api" options="-parameters" />
+      <module name="systemBase.impl" options="-parameters" />
+      <module name="transport.api" options="-parameters" />
+      <module name="transport.impl" options="-parameters" />
+      <module name="warehouse.api" options="-parameters" />
+      <module name="warehouse.impl" options="-parameters" />
+    </option>
+  </component>
+</project>

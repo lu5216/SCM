@@ -1,0 +1,13 @@
+# RabbitMQ配置
+spring:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin
+    listener:
+      simple:
+        prefetch: 1          # 单次推送消息数量
+        concurrency: 5       # 消费者的消费线程数量
+        max-concurrency: 10  # 消费者的最大线程数量
+        acknowledge-mode: none

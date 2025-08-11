@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户名密码变更</title>
+    <style>
+        .button {
+            background-color: rgb(14 165 233);
+            border-radius: 10px;
+            border: #181818;
+            color: white;
+            padding: 6px 10px;
+        }
+
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 9px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div style="display: flex;align-items: center">
+        <img class="avatar" th:src="${avatar}" alt="头像">
+        <div style="display: block;margin-left: 10px">
+            <p th:text="'您好,'+${recipientName}"></p>
+            <p>您的用户名或密码已发生变更，请注意安全！</p>
+        </div>
+    </div>
+    <button class="button">
+        <a th:href="${url}">查看详细内容</a>
+    </button>
+    <p>此邮件由系统自动发出,请勿直接回复</p>
+</div>
+</body>
+</html>

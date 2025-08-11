@@ -1,0 +1,72 @@
+server:
+  port: 9999
+  # 网站前缀名称 [127.0.0.1:10086/scm-demo]
+  servlet:
+    context-path: /scm-demo
+
+spring:
+  # 需要的配置文件
+  profiles:
+    include:
+      - mq
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 远程 101.70.156.105:10317
+    url: jdbc:mysql://127.0.0.1:3306/scm?serverTimezone=UTC
+    username: root
+    password: 123456
+
+  # swagger-ui
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+  # redis配置
+  redis:
+    database: 0
+    # 远程 120.233.26.237 42152
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+      shutdown-timeout: 10000
+
+  # Excel导入导出配置
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+  # mail邮件配置
+  mail:
+    host: smtp.qq.com
+    port: 465
+    default-encoding: utf-8
+    protocol: smtp
+    username: 3894932596@qq.com
+    password: lbujnvqddsqzcgcc
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.socketFactory.port: 465
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
+      mail.smtp.socketFactory.fallback: false
+
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/, classpath:/templates/, classpath:/emailTemplates/
+
+# Mybatis映射
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: AUTO

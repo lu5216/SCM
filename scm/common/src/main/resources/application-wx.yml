@@ -1,0 +1,11 @@
+## 微信公众号配置（配置在nacos）
+#wx:
+#  appId: wx25d13ea13e01967e
+#  secret: 2ddf0b84280edbab684bd9a3745c4cad
+#  token: token
+#  aesKey: aesKey
+#  appletAppId: wx1b8805609fdf2fe6
+#  templateId: 6C1c7IDnTKcv1owlgP34o4iAaViVc5ECjySpQOn6tLs
+#  inventoryAlertTemplateId: RTbAsijDFKDdAum_fSZCGH_OZ47ZYs7VFMG6k7Ka9sw
+#  deliveryTemplateId: ZTdX11Hn8b1YCJwmJDahVlGDLAIF2q8ThOdbL_LGmiw
+#  pagePath: /index
