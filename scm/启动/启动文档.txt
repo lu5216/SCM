@@ -1,0 +1,2 @@
+需要下载rabbitMQ、minIO、Redis、Nacos。
+以上为快捷方式，用于自己快捷使用。
